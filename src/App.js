@@ -4,6 +4,13 @@ import './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
+ state = {
+   persons: [
+   { name: 'Maxx', age: 50},
+   { name: 'Manu', age: 70},
+   { name: 'stephani', age: 30}  
+   ]
+  }
 
  render() {
   return (
@@ -11,9 +18,9 @@ class App extends Component {
         <h1>Hello World</h1>
         <p>Ini bekerja dengan baik</p>
         <button>Switch Name</button>
-        <Person name="Max" age="28" />
-        <Person name="Manu" age="29">My Hobbies : Racing </Person>
-        <Person name="Indra" age="20" />
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My Hobbies : Racing </Person>
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
     </div>
   );
 }
