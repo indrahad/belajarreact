@@ -12,12 +12,17 @@ class App extends Component {
    ]
   }
 
+  //ini adalah function dari tombol switch name
+  switchNameHandeler = () => {
+    console.log('Was Clicked!');
+  }
+
  render() {
   return (
     <div className="App">
         <h1>Hello World</h1>
         <p>Ini bekerja dengan baik</p>
-        <button>Switch Name</button>
+        <button onClick={this.switchNameHandeler}>Switch Name</button>
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My Hobbies : Racing </Person>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
